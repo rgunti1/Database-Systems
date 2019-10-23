@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Data Display Page</title>
+    <link href="../assets/stylesheets/disp_dat.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <section>
+      <!-- <h1> Data of Query <%= table.join(' & ') %> table </h1> -->
+      <h1> Data of Query <%= queryid %> </h1>
+      <p> <%= queryS %> </p>
+      <table>
+        <tbody>
+          <tr id = "columns">
+            <% columns.forEach(function(row){%>
+            <td>
+                <p> <%= row[1] %> <p>
+            </td>
+            <% }); %>
+          </tr>
+          <% data.forEach(function(rowid){%>
+          <tr>
+            <% columns.forEach(function(row){%>
+            <td>
+                <p> <%= rowid[row[1]] %> <p>
+            </td>
+            <% }); %>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+    </section>
+  </body>
+</html>
