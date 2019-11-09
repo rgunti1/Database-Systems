@@ -1,0 +1,30 @@
+body{text-align: center;}
+h1{
+  padding-top: 6%;
+  padding-bottom: 2%;
+}
+
+h2{
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+table {
+  margin: auto;
+  width: 50%;
+  table-layout: fixed;
+}
+td{
+  padding: 1%;
+}
+
+button{
+  width: 90%;
+  height: 50px;
+	border-radius: 10px;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}

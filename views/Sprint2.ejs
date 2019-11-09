@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="../assets/stylesheets/Sprint2.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1> <%= sprint %> </h1>
+    <section>
+      <h2> Please click on buttons below to see the respective table data </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=5';"> View Query5 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=6';"> View Query6 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=7';"> View Query7 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=8';"> View Query8 data </button></td>
+          </tr>
+          <tr>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=9';"> View Query9 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=10';"> View Query10 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=11';"> View Query11 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=12';"> View Query12 data </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
