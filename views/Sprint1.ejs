@@ -2,13 +2,27 @@
 <html lang ="en">
   <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Sprint 1 Page</title>
     <link href="../assets/stylesheets/Sprint1.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <a href="/"> Home Page </a>
     <h1> <%= sprint %> </h1>
     <section>
       <h2> Please click on buttons below to see the respective table data </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=1';"> View Query1 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=2';"> View Query2 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=3';"> View Query3 data </button></td>
+            <td><button onclick="window.location.href = '/disp_data?QueryID=4';"> View Query4 data </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2> Please click on buttons below to see the respective Views data </h2>
       <table>
         <tbody>
           <tr>

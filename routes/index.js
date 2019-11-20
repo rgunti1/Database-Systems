@@ -9,6 +9,9 @@ router.get('/',function(req, res){
 })
 .get('/Sprint2', function(req, res){
   res.render('Sprint2', {sprint: req.url.slice(1)});
+})
+.get('/Sprint3', function(req, res){
+  res.render('Sprint3', {sprint: req.url.slice(1)});
 });
 
 module.exports = router;

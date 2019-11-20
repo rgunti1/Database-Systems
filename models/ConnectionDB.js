@@ -4,7 +4,7 @@ const con = mysql.createConnection({
   host: "fall2019dbgunti.cvx4h0yw9trj.us-east-2.rds.amazonaws.com",
   user: "rgunti1",
   password: "Frank3nst3In_18",
-  database: "MMS_Sprint2",
+  database: "MMS_Sprint3",
   dateStrings: true
 });
 
