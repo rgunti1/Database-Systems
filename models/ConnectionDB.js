@@ -27,7 +27,19 @@ const query_data = [
   {QueryID:"9", Query: "SELECT Q.quiz_id, Q.quiz_name, Q.is_active, Q.author, Qs.question_id, Qs.question_text, C.choice, C.is_right from Quiz as Q, Question as Qs, Choices as C  WHERE Q.quiz_id = Qs.quiz_id AND Qs.Question_id = C.Question_id AND C.quiz_id = Q.quiz_id"},
   {QueryID:"10", Query: "SELECT R.attempt_no,R.res_time, Q.quiz_id, Q.quiz_name, Qs.question_id, Qs.question_text, RA.is_right, RA.answer, R.Responder_id FROM Quiz as Q, Response as R, Question as Qs, Response_Answer as RA  WHERE R.quiz_id = Q.quiz_id and Q.quiz_id = Qs.quiz_id and RA.response_id = R.response_id and Qs.question_id = RA.question_id ORDER BY R.Responder_id, Attempt_no"},
   {QueryID:"11", Query: "SELECT concat_ws(' ',E1.first_name,E1.last_name) Apprentice_Name, J.* FROM (SELECT A.apprentice_id, A.mentor_id, concat_ws(' ',E.first_name,E.last_name) Mentor_Name, A.start_time, A.end_time, A.status, IF(A.attended, 'Yes', 'No') Attended, A.pre_meeting_notes,IFNULL(A.post_meeting_notes, 'Nothing provided by Mentor') post_meeting_notes, concat_ws(', ', concat('Room No: ',A.room_no), concat('Floor No: ',A.floor_no), concat('Building: ',A.building_name)) Location FROM Appointment as A INNER JOIN Employee as E on E.employee_id = A.mentor_id) as J INNER JOIN Employee as E1 ON E1.employee_id = J.apprentice_id"},
-  {QueryID:"12", Query: "SELECT R.attempt_no,R.res_time, Q.quiz_id, Q.quiz_name, Qs.question_id, Qs.question_text, RA.answer, R.responder_id , C.choice FROM Quiz as Q, Response as R, Question as Qs, Response_Answer as RA , (SELECT * FROM Choices WHERE is_right = True) as C WHERE R.quiz_id = Q.quiz_id and Q.quiz_id = Qs.quiz_id and RA.response_id = R.response_id and Qs.question_id = RA.question_id and C.question_id = Qs.Question_id and C.quiz_id = Qs.quiz_id ORDER BY R.Responder_id"}
+  {QueryID:"12", Query: "SELECT R.attempt_no,R.res_time, Q.quiz_id, Q.quiz_name, Qs.question_id, Qs.question_text, RA.answer, R.responder_id , C.choice FROM Quiz as Q, Response as R, Question as Qs, Response_Answer as RA , (SELECT * FROM Choices WHERE is_right = True) as C WHERE R.quiz_id = Q.quiz_id and Q.quiz_id = Qs.quiz_id and RA.response_id = R.response_id and Qs.question_id = RA.question_id and C.question_id = Qs.Question_id and C.quiz_id = Qs.quiz_id ORDER BY R.Responder_id"},
+  {QueryID:"13", Query: "SELECT * FROM EMPLOYEE_INFO"},
+  {QueryID:"14", Query: "SELECT * FROM MENTOR_PUPILS"},
+  {QueryID:"15", Query: "SELECT * FROM APPRENTICE_INFO"},
+  {QueryID:"16", Query: "SELECT * FROM MENTOR_INFO"},
+  {QueryID:"17", Query: "SELECT * FROM ADMIN_INFO"},
+  {QueryID:"18", Query: "SELECT * FROM ALL_HOMEWORKS"},
+  {QueryID:"19", Query: "CALL MAKING_LOGINS_INACTIVE();"},
+  {QueryID:"20", Query: "CALL GET_QUIZ(1,1);"},
+  {QueryID:"21", Query: "CALL LOGOUT_TIME_UPDATE(1,'M');"},
+  {QueryID:"22", Query: "SELECT SCORE_CALCULATION(1, 5, 0) AS Score;"},
+  {QueryID:"23", Query: "SELECT SCORE_CALCULATION(1, 4, 0) AS Score;"},
+    {QueryID:"21", Query: "CALL LOGIN_TIME_UPDATE(1,'M');"},
 ];
 
 
